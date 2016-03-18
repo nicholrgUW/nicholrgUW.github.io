@@ -1,3 +1,7 @@
+body {
+	outline:none;
+}
+
 p, li{
 	color: darksalmon;
 	/*text-shadow:2px 2px orange;*/
