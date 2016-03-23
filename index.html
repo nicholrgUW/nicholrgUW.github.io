@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <title>∵</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="jquery-2.2.2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="kell.css">
-    <link rel="icon" href="ball.png">
+    <title></title>
+    <script type='text/javascript'>
+    $(window).load(function() {
+        $('input').on('input', function() {
+            var v = $(this).val();
+            var col = Math.floor(Math.random() * 16777215);
+
+            $(":header").css({
+                color: "#" + col.toString(16)
+            });
+            console.log(col);
+
+        });
+    });
+    </script>
 </head>
 
 <body>
-
-<div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+    <div class="fullscreen-bg">
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
             <source src="vcr loop.mp4" type="video/mp4">
-    </video>
-</div>
+        </video>
+    </div>
     <div id="grad">
         <br>
         <br>
         <br>
-<h1 style="color: peach"><i>TIME FOR SEIZURE</i></h1>
-
+        <h1><i>TIME FOR SEIZURE</i></h1>
+        <br>
+        <input type="range" min="10" max="40">
+        <br>
+    </div>
 </body>
 
 </html>
