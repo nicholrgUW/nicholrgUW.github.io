@@ -9,14 +9,13 @@
     <script type='text/javascript'>
     $(window).load(function() {
         $('input').on('input', function() {
-            var v = $(this).val();
-            var col = Math.floor(Math.random() * 16777215);
+            var color1 = Math.floor(Math.random() * 16777215);
+            var color2 = Math.floor(Math.random() * 16777215);
 
             $(":header").css({
-                color: "#" + col.toString(16)
+                color: "#" + color1.toString(16),
+                textShadow: "5px 5px #" + color2.toString(16)
             });
-            console.log(col);
-
         });
     });
     </script>
